@@ -1,20 +1,20 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-   name: mrdevops
+   name: mydeployment
 spec:
    replicas: 2
-   selector:      # tells the controller which pods to watch/belong to
+   selector:     
     matchLabels:
-     app: mrdevops
+     app: myspringbootapp
    template:
       metadata:
         labels:
-          app: mrdevops
+          app: myspringbootapp
       spec:
        containers:
-        - name: mrdevops
-          image: vikashashoke/sringbootapp:latest
+        - name: myspringbootapp
+          image: vikashashoke/sringbootapp:latest              # Docker Image we pushed to dockerHub now using here the same..
           imagePullPolicy: Always
           ports:
           - containerPort: 80
