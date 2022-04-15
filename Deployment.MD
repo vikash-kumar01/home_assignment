@@ -30,6 +30,11 @@
         
         kubectl get all                                  ## To list all the objects we've deployed
         
+        
+ ### List the deployment we deployed 
+     
+       kubectl get deploy mydeployment
+        
 
 
 ### (Optional) Not Mentioned in the task but Exposing the Service Using nodeport to check
@@ -55,6 +60,10 @@
 ### Applying the service.yml
 
       kubectl apply -f service.yml
+      
+### List the service we deployed 
+      
+      kubectl get svc my-nodeport-service
       
 ### List the services
        
